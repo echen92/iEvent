@@ -1,0 +1,65 @@
+CREATE TABLE hostedBy
+	(
+	eventID INTEGER,  
+	hostName CHAR(200),
+	
+	FOREIGN KEY(eventID) REFERENCES events(id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+	
+	FOREIGN KEY(hostName) REFERENCES persons(name)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);
+	
+CREATE TABLE sponsoredBy
+	(
+	eventID INTEGER,  
+	sponsorName CHAR(200),
+	
+	FOREIGN KEY(eventID) REFERENCES events(id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+	
+	FOREIGN KEY(sponsorName) REFERENCES persons(name)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);
+
+CREATE TABLE artist
+	(
+	eventID INTEGER,  
+	artistName CHAR(200),
+	
+	FOREIGN KEY(eventID) REFERENCES events(id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+	
+	FOREIGN KEY(artistName) REFERENCES persons(name)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);
+	
+CREATE TABLE speaker
+	(
+	eventID INTEGER,  
+	speakerName CHAR(200),
+	
+	FOREIGN KEY(eventID) REFERENCES events(id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+	
+	FOREIGN KEY(speakerName) REFERENCES persons(name)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);
+	
+CREATE TABLE teamPlaying
+	(
+	eventID INTEGER,  
+	teamName CHAR(200),
+	
+	FOREIGN KEY(teamName) REFERENCES teams(name)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);

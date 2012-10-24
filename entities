@@ -1,0 +1,37 @@
+CREATE TABLE events
+	(
+	id INTEGER, 
+	name CHAR(200), 
+	registrationDeadline DATA, 
+	eventDate DATE, 
+	eventTime TIME,
+	cost INT, 
+	duration TIME, 
+	food BOOL, 
+	location CHAR(200), 
+	description TEXT,
+
+	PRIMARY KEY (id)
+	);	
+
+CREATE TABLE persons
+	(
+	name CHAR(150) NOT NULL, 
+	email CHAR(50), 
+	phone INT, 
+	address CHAR(100),
+	
+	PRIMARY KEY(name)
+	);
+
+CREATE TABLE teams
+	(
+	name CHAR(200),
+	home CHAR(200),
+	sportType CHAR(200),
+	
+	PRIMARY KEY(name)
+	);
+
+
+
