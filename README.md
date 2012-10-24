@@ -15,7 +15,7 @@ Fall 2012 @ the University of Illinois at Urbana-Champaign
 
 ## Requirements
 
-* Web server with Ruby/Rails and Phusion Passenger
+* Web server with Ruby/Rails
 
 [Project Page](https://wiki.engr.illinois.edu/display/cs411fa12/Project+The+A-Team)
 
